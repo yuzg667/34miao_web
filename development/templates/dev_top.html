@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>三四秒，IT产品聚合平台</title>
+	<link rel="stylesheet" type="text/css" href="/static/development/css/index.css">
+	<script type="text/javascript" src="/static/development/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/development/js/index.js"></script>
+</head>
+<body>
+	<!-- top_area -->
+	<div class="top_area" id="top_area">
+		<div class="top">
+			<a class="logo_url" href="{% url 'product_home_url' %}"><img class="logo" src="/static/development/img/34miao_logo.png"></a>
+			<div class="menu">
+				<ul>
+					<li><a href="{% url 'product_home_url' %}">Products</a></li>
+					<li><a href="{% url 'news_pre_next_page_url' '1' %}">News</a></li>
+					<li><a href="{% url 'design_pre_next_page_url' '1' %}">Design</a></li>
+					<li><a class="selected" href="{% url 'development_pre_next_page_url' '1' %}">Development</a></li>
+					<li><a href="{% url 'marketing_pre_next_page_url' '1' %}">Marketing</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main_area">
+		<!-- category menu -->
+		<div class="category_area">
+			<ul>
+				<li><a class="first_a" href="{% url 'development_pre_next_page_url' '1' %}">|---全部</a></li>
+				<li><a class="selected indent_li" href="{% url 'development_top_pre_next_page_url' '1' %}">|---头条(TOP)</a></li>
+				<li><a class="indent_li" href="{% url 'development_front_pre_next_page_url' '1' %}">|---前端(Web)</a></li>
+				<li><a class="indent_li" href="{% url 'development_python_pre_next_page_url' '1' %}">|---后端(Python)</a></li>
+				<li><a class="indent_li" href="{% url 'development_iOS_pre_next_page_url' '1' %}">|---移动(iOS)</a></li>
+				<li><a class="indent_li" href="{% url 'development_mySQL_pre_next_page_url' '1' %}">|---数据库(MySQL)</a></li>
+				<li><a class="indent_li" href="{% url 'development_operation_pre_next_page_url' '1' %}">|---运维(Linux)</a></li>
+			</ul>
+		</div>
+		<!-- content -->
+		<div class="content_area">
+			<ul>
+				{% for devtop in devtopAll %}
+				<li class="content">
+					<div>
+						<p class="category {{devtop.dev_category}}">头条</p>
+						<a class="dev_title" href="{{devtop.dev_link}}" target="_blank" title="{{devtop.dev_title}}">{{devtop.dev_title}}</a>
+					</div>
+					<p class="dev_date">{{devtop.dev_date|date:'Y-m-d H:i'}}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;From <span>{{devtop.dev_source}}</span></p>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<!-- page -->
+	<div class="page_area">
+			<a href="{% url 'development_top_pre_next_page_url' pre_page %}">上一页</a>
+			<a class="page_num" href="" >{{page}}</a>
+			<a href="{% url 'development_top_pre_next_page_url' next_page %}">下一页</a>
+		</div>
+	<!-- footer -->
+	<div class="footer">
+		<p class="email">Email:<a href="mailto:weisubao1987@gmail.com">weisubao1987@gmail.com</a></p>
+		<p class="copyright">©2015 34miao.com</p>
+		<p class="icp"><a href="http://www.miitbeian.gov.cn/">苏ICP备13003333号-2</a></p>
+	</div>
+</body>
+</html>

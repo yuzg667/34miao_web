@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>三四秒，IT产品聚合平台</title>
+	<link rel="stylesheet" type="text/css" href="/static/marketing/css/index.css">
+	<script type="text/javascript" src="/static/marketing/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/marketing/js/index.js"></script>
+</head>
+<body>
+	<!-- top_area -->
+	<div class="top_area" id="top_area">
+		<div class="top">
+			<a class="logo_url" href="{% url 'product_home_url' %}"><img class="logo" src="/static/marketing/img/34miao_logo.png"></a>
+			<div class="menu">
+				<ul>
+					<li><a href="{% url 'product_home_url' %}">Products</a></li>
+					<li><a href="{% url 'news_pre_next_page_url' '1' %}">News</a></li>
+					<li><a href="{% url 'design_pre_next_page_url' '1' %}">Design</a></li>
+					<li><a href="{% url 'development_pre_next_page_url' '1' %}">Development</a></li>
+					<li><a class="selected" href="{% url 'marketing_pre_next_page_url' '1' %}">Marketing</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- content_area -->
+	<div class="content_area">
+		<ul>
+			{% for marketing in marketingAll %}
+			<li class="content">
+				<div class="m_img_div">
+					<a class="m_img_url" href="{{marketing.m_link}}" target="_blank"><img class="m_img" src="{% if marketing.m_img_url %}{{marketing.m_img_url}}{% else %}/static/marketing/img/marketing-default.jpg{% endif %}"></a>
+				</div>
+				<a class="m_title" href="{{marketing.m_link}}" target="_blank" title="{{marketing.m_title}}">{{marketing.m_title}}</a>
+				<p class="m_desc">{{marketing.m_desc}}</p>
+				<p class="m_date">{{marketing.m_date|date:'Y-m-d H:i'}}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;From <span>{{marketing.m_source}}</span></p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<!-- page -->
+	<div class="page_area">
+			<a href="{% url 'marketing_pre_next_page_url' pre_page %}">上一页</a>
+			<a class="page_num" href="" >{{page}}</a>
+			<a href="{% url 'marketing_pre_next_page_url' next_page %}">下一页</a>
+		</div>
+	<!-- footer -->
+	<div class="footer">
+		<p class="email">Email:<a href="mailto:weisubao1987@gmail.com">weisubao1987@gmail.com</a></p>
+		<p class="copyright">©2015 34miao.com</p>
+		<p class="icp"><a href="http://www.miitbeian.gov.cn/">苏ICP备13003333号-2</a></p>
+	</div>
+</body>
+</html>

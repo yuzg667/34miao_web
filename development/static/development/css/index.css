@@ -1,0 +1,219 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'STZhongsong';
+}
+/*top_area*/
+.top_area{
+	width: 100%;
+	height: 58px;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #EEEEEE;
+	box-shadow: 0px 1px 5px #EFEFEF;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+.top_area .top{
+	width: 900px;
+	height: 58px;
+	margin: 0 auto;
+}
+.top_area .top a.logo_url{
+	float: left;
+}
+.top_area .top a img{
+	border: none;
+}
+.top_area .top .logo{
+	margin-top: 9px;
+}
+.top_area .top .menu{
+	float: right;
+	margin-top: 14px;
+}
+.top_area .top .menu ul li{
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+}
+.top_area .top .menu ul li a{
+	display: block;
+	width: 110px;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	color: #666666;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 4px;
+}
+.top_area .top .menu ul li a.selected{
+	background-color: #EA6363;
+	color: #FFFFFF;
+}
+.top_area .top .menu ul li a:hover{
+	background-color: #EA6363;
+	color: #FFFFFF;
+}
+/*main_area*/
+div.main_area{
+	width: 900px;
+	margin: 0 auto;
+	/*margin-top: 80px;*/
+	padding-top: 80px;
+}
+/*category_area*/
+div.main_area div.category_area{
+	width: 220px;
+	height: 281px;
+	float: right;
+}
+div.main_area div.category_area ul li{
+	width: 100%;
+	height: 40px;
+	list-style: none;	
+}
+div.main_area div.category_area ul li a{
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: #666666;
+	text-indent: 8px;
+	background-color: #EFEEEE;
+	border-bottom: 1px dashed #CCCCCC;
+}
+div.main_area div.category_area ul li a.first_a{
+	border-top: 1px dashed #DDDDDD;
+}
+div.main_area div.category_area ul li a.indent_li{
+	text-indent: 28px;
+}
+div.main_area div.category_area ul li a:hover{
+	color: #EA6363;
+}
+div.main_area div.category_area ul li a.selected{
+	background-color: #EA6363;
+	color: #FFFFFF;
+	font-weight: 700;
+	border: none;
+}
+/*content_area*/
+div.main_area div.content_area{
+	width: 650px;
+}
+div.main_area .content_area ul li.content{
+	width: 100%;
+	border-top: 1px dotted #DDDDDD;
+	border-bottom: 1px dotted #EEEEEE;
+	list-style: none;
+}
+.content_area ul li.content div{
+	width: 620px;
+}
+.content_area ul li.content div p.category{
+	width: 46px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	float: left;
+	font-size: 12px;
+	color: #EFEFEF;
+}
+.content_area ul li.content div p.top{
+	background-color: #ED4746;
+}
+.content_area ul li.content div p.front{
+	background-color: #F07530;
+}
+.content_area ul li.content div p.python{
+	background-color: #608D65;
+}
+.content_area ul li.content div p.iOS{
+	background-color: #7DC8CA;
+}
+.content_area ul li.content div p.mySQL{
+	background-color: #6D9ACA;
+}
+.content_area ul li.content div p.operation{
+	background-color: #BD539A;
+}
+.content_area ul li.content div a.dev_title{
+	display: block;
+	width: 560px;
+	line-height: 24px;
+	margin-left: 56px;
+	margin-top: 6px;
+	text-decoration: none;
+	/*color: rgba(0,0,0,0.8);*/
+	color: #444444;
+	font-weight: 700;
+	font-size: 16px;
+	outline: none;
+}
+.content_area ul li.content a.dev_title:hover{
+	color: #EA6363;
+}
+.content_area ul li.content p.dev_date{
+	font-size: 12px;
+	/*color: rgba(0,0,0,0.5);*/
+	color: #999999;
+	margin-top: 8px;
+	margin-bottom: 6px;
+	margin-left: 56px;
+}
+.content_area ul li.content p.dev_date span{
+	color: #DD7777;
+}
+/*page*/
+.page_area{
+	width: 900px;
+	height: 100px;
+	margin:0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
+.page_area a{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	margin-top: 50px;
+	line-height: 30px;
+	text-decoration: none;
+	color: #666666;
+	border: 1px solid #DDDDDD;
+}
+.page_area a.page_num{
+	width: 50px;
+	color: #EA6363;
+}
+.page_area a:hover{
+	background-color: #EA6363;
+	color: #FFFFFF;
+}
+/*footer*/
+.footer{
+	width: 100%;
+	margin-top: 40px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	background-color: #444444;
+}
+.footer p{
+	width:100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #999999;
+	font-size: 12px;
+}
+.footer p.email a{
+	color: #999999;
+}
+.footer p.icp a{
+	color: #999999;
+	text-decoration: none;
+}

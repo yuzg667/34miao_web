@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>三四秒，IT产品聚合平台</title>
+	<link rel="stylesheet" type="text/css" href="/static/product/css/index.css">
+	<script type="text/javascript" src="/static/product/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/product/js/index.js"></script>
+</head>
+<body>
+	<!-- top_area -->
+	<div class="top_area" id="top_area">
+		<div class="top">
+			<a class="logo_url" href="{% url 'product_home_url' %}"><img class="logo" src="/static/product/img/34miao_logo.png"></a>
+			<div class="menu">
+				<ul>
+					<li><a class="selected" href="{% url 'product_home_url' %}">Products</a></li>
+					<li><a href="{% url 'news_pre_next_page_url' '1' %}">News</a></li>
+					<li><a href="{% url 'design_pre_next_page_url' '1' %}">Design</a></li>
+					<li><a href="{% url 'development_pre_next_page_url' '1' %}">Development</a></li>
+					<li><a href="{% url 'marketing_pre_next_page_url' '1' %}">Marketing</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- content_area -->
+	<div class="content_area">
+		<ul>
+			{% for product in products %}
+			<li class="content">
+				<a class="p_name" href="{{product.p_link}}" target="_blank">{{product.p_name}}</a>
+				<p class="p_desc">{{product.p_desc}}</p>
+				<a class="p_source_link" href="{{product.p_source_link}}" target="_blank"><img class="p_source_img" src="/static/product/img/{{product.p_source}}.png"></a>
+				<p class="p_date">{{product.p_date|date:'Y-m-d H:i'}}</p>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="page_area">
+			<a href="{% url 'product_pre_next_page_url' pre_page %}">上一页</a>
+			<a class="page_num" href="" >{{page}}</a>
+			<a href="{% url 'product_pre_next_page_url' next_page %}">下一页</a>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<p class="email">Email:<a href="mailto:weisubao1987@gmail.com">weisubao1987@gmail.com</a></p>
+		<p class="copyright">©2015 34miao.com</p>
+		<p class="icp"><a href="http://www.miitbeian.gov.cn/">苏ICP备13003333号-2</a></p>
+	</div>
+</body>
+</html>
