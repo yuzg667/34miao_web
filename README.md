@@ -11,7 +11,8 @@
 ### 2、网站开发要点
 * Django。网站整体用的Python的Django框架开发的。
 * Scrapy。用Scrapy写了几十个爬虫，用于自动抓取内容。（爬虫这里未放出，怕咬着各位）
-* 云服务器ECS。买的是阿里的云服务器，大概40+元一个月，CPU 1核，内存 512 MB，带宽 1Mbps，系统是Ubuntu的因为要满足Python程序的配置，web服务器用的Apache没有用Nginx。
+* 云服务器ECS。买的是阿里的云服务器，大概40+元一个月，CPU 1核，内存 512 MB，带宽 1Mbps，系统是Ubuntu的因为要满足Python程序的配置，web服务器用的Apache没有用Nginx，数据库是MySQL。
+* 用了百度统计。
 
 ### 3、存在的问题
 * 程序方面。在static资源那一块有些可以公用的图片和模板，需要优化。
